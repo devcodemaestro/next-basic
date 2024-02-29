@@ -789,7 +789,8 @@ export default async function Home() {
         <div>
           {res.map((item: Todo) => (
             <div key={item.id}>
-              id {item.userId} : <Link href={`/todos/${item.id}`}>{item.title}</Link>
+              id {item.userId} :{" "}
+              <Link href={`/todos/${item.id}`}>{item.title}</Link>
             </div>
           ))}
         </div>
@@ -857,7 +858,11 @@ export default async function Home() {
     description: "연습하고 있습니다. ^^",
   };
 
-  export default function RootLayout({ children }: { children: React.ReactNode }) {
+  export default function RootLayout({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) {
     return (
       <html lang="en">
         <body className={inter.className}>{children}</body>
@@ -955,7 +960,8 @@ export default async function Home() {
         <div>
           {res.map((item: Todo) => (
             <div key={item.id}>
-              id {item.userId} : <Link href={`/todos/${item.id}`}>{item.title}</Link>
+              id {item.userId} :{" "}
+              <Link href={`/todos/${item.id}`}>{item.title}</Link>
             </div>
           ))}
         </div>
@@ -989,7 +995,9 @@ export default async function Home() {
     // const cityName = params.city === "daegu" ? "대구" : params.city;
     return (
       <>
-        <div className={style.detailTitle}>상세내용 : {searchParams.cityName}</div>
+        <div className={style.detailTitle}>
+          상세내용 : {searchParams.cityName}
+        </div>
 
         <HomeButton />
       </>
